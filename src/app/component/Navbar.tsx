@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react";
 import { Bars3BottomRightIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import Logo from "../../../public/logo.svg";
@@ -10,6 +11,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
+
 
 type Props = {
   isTopOfPage: boolean;
@@ -41,10 +43,9 @@ const Navbar = ({ isTopOfPage }: Props) => {
               alt="logo"
               width={100}
               height={100}
-              layout="responsive"
               loading="lazy"
               blurDataURL={Logo}
-              className="h-full w-full object-cover object-center"
+              className="h-[22px] w-[108px] object-cover object-center"
             />
 
             {/* RIGHT SIDE */}
@@ -87,7 +88,6 @@ const Navbar = ({ isTopOfPage }: Props) => {
                     alt="logo"
                     width={100}
                     height={100}
-                    layout="responsive"
                     loading="lazy"
                     blurDataURL={Logo}
                     className="h-full w-full object-cover object-center"
@@ -97,7 +97,6 @@ const Navbar = ({ isTopOfPage }: Props) => {
                     alt="logo"
                     width={100}
                     height={100}
-                    layout="responsive"
                     loading="lazy"
                     blurDataURL={Logo}
                     className="h-full w-full object-cover object-center"
@@ -107,7 +106,6 @@ const Navbar = ({ isTopOfPage }: Props) => {
                     alt="logo"
                     width={100}
                     height={100}
-                    layout="responsive"
                     loading="lazy"
                     blurDataURL={Logo}
                     className="h-full w-full object-cover object-center"
