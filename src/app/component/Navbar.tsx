@@ -5,7 +5,7 @@ import Logo from "../../../public/logo.svg";
 import Profile from "../../../public/profile.svg";
 import Cart from "../../../public/bag.svg";
 import WishList from "../../../public/wishlist.svg";
-// import Link from "./Link";
+import SearchIcon from "../../../public/search.svg";
 import Link from "next/link";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
@@ -63,21 +63,16 @@ const Navbar = ({ isTopOfPage }: Props) => {
                   <SearchBar
                     onSearch={(searchTerm) => console.log(searchTerm)}
                     icon={
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 text-gray-400"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.5"
-                          d="M15.5 15.5L19 19"
+                      SearchIcon && (
+                        <Image
+                          src={SearchIcon}
+                          alt="logo"
+                          width={100}
+                          height={100}
+                          loading="lazy"
+                          blurDataURL={Logo}
                         />
-                        <circle cx="11" cy="11" r="8" />
-                      </svg>
+                      )
                     }
                   />
                 </div>
@@ -117,7 +112,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
                 className="rounded-full bg-secondary-500 p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <Bars3BottomRightIcon className="h-6 w-6 text-white" />
+                <Bars3BottomRightIcon className="h-6 w-6 text-primary" />
               </button>
             )}
           </div>
@@ -146,7 +141,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
                 setIsMenuToggled((isMenuToggled) => !isMenuToggled)
               }
             >
-              <XCircleIcon className="h-6 w-6 text-gray-400" />
+              <XCircleIcon className="h-6 w-6 text-primary" />
             </button>
           </motion.div>
 
