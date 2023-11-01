@@ -1,81 +1,91 @@
+type FooterData = {
+    shopCategory: {
+        title: string;
+        link: string;
+    }[];
+    about: {
+        title: string;
+        link: string;
+    }[];
+    policy: {
+        title: string;
+        link: string;
+    }[];
+};
 
-
-export const footerData = [
+export const footerData: FooterData = {
+  shopCategory: [
     {
-        shopCategory: [
-            {
-                title: 'Skincare',
-                link: '/shop'
-            },
-            {
-                title: 'Personal Care',
-                link: '/about'
-            },
-            {
-                title: 'Handbags',
-                link: '/contact'
-            },
-            {
-                title: 'Apparels',
-                link: '/blog'
-            },
-            {
-                title: 'Watches',
-                link: '/blog'
-            },
-            {
-                title: 'Eye Wear',
-                link: '/blog'
-            },
-            {
-                title: 'Jewllerry',
-                link: '/blog'
-            }
-        ],
-        about: [
-            {
-                title: 'Contact Us',
-                link: '/'
-            },
-            {
-                title: 'About Us',
-                link: '/'
-            },
-            {
-                title: 'Careers',
-                link: '/'
-            },
-            {
-                title: 'Press',
-                link: '/'
-            }
-        ],
-        policy: [
-            {
-                title: 'Return Policy',
-                link: '/'
-            },
-            {
-                title: 'Terms of Use',
-                link: '/'
-            },
-            {
-                title: 'Sitemap',
-                link: '/'
-            },
-            {
-                title: 'Security',
-                link: '/'
-            },
-            {
-                title: 'Privacy',
-                link: '/'
-            },
-            {
-                title: 'EPR Compliance',
-                link: '/'
-            }
-        ],
-    
-    }
-];
+      title: "Skincare",
+      link: "/shop",
+    },
+    {
+      title: "Personal Care",
+      link: "/about",
+    },
+    {
+      title: "Handbags",
+      link: "/contact",
+    },
+    {
+      title: "Apparels",
+      link: "/blog",
+    },
+    {
+      title: "Watches",
+      link: "/blog",
+    },
+    {
+      title: "Eye Wear",
+      link: "/blog",
+    },
+    {
+      title: "Jewllerry",
+      link: "/blog",
+    },
+  ],
+  about: [
+    {
+      title: "Contact Us",
+      link: "/",
+    },
+    {
+      title: "About Us",
+      link: "/",
+    },
+    {
+      title: "Careers",
+      link: "/",
+    },
+    {
+      title: "Press",
+      link: "/",
+    },
+  ],
+  policy: [
+    {
+      title: "Return Policy",
+      link: "/",
+    },
+    {
+      title: "Terms of Use",
+      link: "/",
+    },
+    {
+      title: "Sitemap",
+      link: "/",
+    },
+    {
+      title: "Security",
+      link: "/",
+    },
+    {
+      title: "Privacy",
+      link: "/",
+    },
+    {
+      title: "EPR Compliance",
+      link: "/",
+    },
+  ],
+};
