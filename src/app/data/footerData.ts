@@ -1,6 +1,6 @@
 
 
-const footerData = [
+export const footerData = [
     {
         shopCategory: [
             {
