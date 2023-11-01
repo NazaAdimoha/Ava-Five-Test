@@ -16,8 +16,11 @@ const config: Config = {
       //define custom colors for buttons
       colors: {
         primary: "#1B4B66",
+        primaryTint: "#639599",
         secondary: "#fff",
         tertiary: "#B00020",
+        primaryText: "#fff",
+        secondaryText: "#B6B6B6",
       }
     },
   },
