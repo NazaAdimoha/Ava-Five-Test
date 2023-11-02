@@ -6,7 +6,7 @@ const fetchProducts = async () => {
     return response.data   
 }
 
-const useFetchProducts = () => {
+export const useFetchProducts = () => {
     const queryKey = "products"
     const queryFn = fetchProducts
     const queryOptions = {
