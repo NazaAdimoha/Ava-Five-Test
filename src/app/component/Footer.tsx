@@ -3,6 +3,7 @@ import { footerData } from "../data/footerData";
 import SocialMediaLogos from "../../../public/logos.svg";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-white dark:bg-primary ">
       <div className="flex md:justify-between mx-auto w-full max-w-screen-xl h-[342px]">
@@ -102,7 +103,7 @@ const Footer = () => {
             <p className="text-primaryText text-[14px] font-semibold text-end">United States</p>
           </div>
           <p className="text-secondaryText text-[14px] font-semibold items-end">
-            © 2021 | Cora Leviene All Rights Reserved
+            © {currentYear} | Cora Leviene All Rights Reserved
           </p>
         </div>
       </div>
