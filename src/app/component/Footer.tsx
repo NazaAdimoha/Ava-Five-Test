@@ -67,7 +67,7 @@ const Footer = () => {
               className="h-[38px] w-[200px] object-cover object-center"
             />
           </div>
-          <div className="flex items-center space-x-2 ">
+          <div className="flex items-center space-x-2 text-end">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ const Footer = () => {
                 </defs>
               </svg>
             </span>
-            <p className="text-primaryText text-[14px] font-semibold">United States</p>
+            <p className="text-primaryText text-[14px] font-semibold text-end">United States</p>
           </div>
           <p className="text-secondaryText text-[14px] font-semibold items-end">
             © 2021 | Cora Leviene All Rights Reserved

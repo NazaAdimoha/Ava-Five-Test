@@ -1,14 +1,13 @@
-"use client";
-import { useState } from 'react';
+// "use client";
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
+import ClearanceMessage from './component/ClearanceMessage';
 
 export default function Home() {
-  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
-
   return (
     <main className="">
-        <Navbar isTopOfPage={isTopOfPage} />
+        <Navbar />
+        <ClearanceMessage />
         <Footer />
     </main>
   )

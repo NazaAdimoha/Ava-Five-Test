@@ -13,17 +13,17 @@ import Image from "next/image";
 import SearchBar from "./SearchBar";
 
 
-type Props = {
-  isTopOfPage: boolean;
-};
+// type Props = {
+//   isTopOfPage: boolean;
+// };
 
-const Navbar = ({ isTopOfPage }: Props) => {
+const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
-  const navBarBackground = isTopOfPage
-    ? "bg-transparent"
-    : "bg-primary-100 bg-opacity-90 drop-shadow-xl";
+//   const navBarBackground = isTopOfPage
+//     ? "bg-transparent"
+//     : "bg-primary-100 bg-opacity-90 drop-shadow-xl";
 
   //Animatate hambuger icon state
   const variants = {
@@ -33,7 +33,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
   return (
     <nav>
       <div
-        className={`${navBarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
+        className={`${flexBetween}  top-0 z-30 w-full py-6`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
