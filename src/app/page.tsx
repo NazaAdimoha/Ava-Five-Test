@@ -1,6 +1,5 @@
 // "use client";
 import Navbar from './component/Navbar';
-import Footer from './component/Footer';
 import ClearanceMessage from './component/ClearanceMessage';
 
 export default function Home() {
@@ -8,7 +7,6 @@ export default function Home() {
     <main className="">
         <Navbar />
         <ClearanceMessage />
-        <Footer />
     </main>
   )
 }
