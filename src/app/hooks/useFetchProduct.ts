@@ -1,3 +1,4 @@
+"use client";
 import { axiosInstance } from "../service/http_common";
 import { useQuery } from "react-query";
 
