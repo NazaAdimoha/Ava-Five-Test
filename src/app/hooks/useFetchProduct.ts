@@ -9,7 +9,7 @@ const fetchProducts = async () => {
 
 export const useFetchProducts = () => {
     const queryKey = "products"
-    const queryFn = fetchProducts
+    const queryFn = () => fetchProducts()
     const queryOptions = {
         staleTime: 5000, // 5 seconds
         cacheTime: 3600000, // 1 hour
@@ -19,7 +19,9 @@ export const useFetchProducts = () => {
         queryKey,
         queryFn,
         queryOptions
+        
     )
 
+    console.log("products", products)
     return { products, isLoading, error }
 };
