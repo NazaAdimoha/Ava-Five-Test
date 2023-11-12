@@ -4,24 +4,25 @@ import { useFetchProducts } from "../hooks/useFetchProduct";
 import CaretRight from "../../../public/chevron-right.svg";
 import Image from "next/image";
 import ProductCard from "./ProductCard";
-import { Key } from "react";
+import { Key, useState } from "react";
 
 const ProductList = () => {
   const { products, isLoading, error } = useFetchProducts();
+  const [viewAll, setViewAll] = useState<boolean>(false);
 
   //define product state
-  const productList = products;
+  const productList = products ;
   return (
     <section className="bg-secondary p-10">
-      <div className="flex items-center justify-between">
-        <p>New Arrivals</p>
+      <div className="flex items-center justify-between mb-4">
+        <p className="text-2xl text-primary">New Arrivals</p>
         <div>
           <Link
             href="/product"
-            className="p-[10px] text-primary flex justify-center items-center gap-4 border rounded-md transition ease-in-out delay-150 bg-slate-400 hover:-translate-y-1 hover:scale-110 hover:bg-primary hover:text-secondaryText duration-300 "
+            className="p-[10px] text-primary flex justify-center items-center gap-4 border rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-primary hover:text-secondaryText duration-300 "
           >
             View All{" "}
-            <span>
+            <span className="hover:bg-white">
               <Image src={CaretRight} alt="caretDown" width={20} height={20} />
             </span>
           </Link>
@@ -29,14 +30,14 @@ const ProductList = () => {
       </div>
       {/* product list */}
 
-      <div className="gap-4 grid grid-rows-2 md:grid-rows-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
         {isLoading ? (
           <div>Loading...</div>
         ) : error ? (
           <div>Error fetching product</div>
         ) : (
           productList && productList.products.map(
-            (product: { title: string; price: number; description: string; images: string; isFavourite: boolean | undefined; }, index: Key | null | undefined) => (
+            (product: { title: string; brand: string; price: number; description: string; images: string; isFavourite: boolean | undefined; }, index: Key | null | undefined) => (
             <ProductCard
                 key={index}
                 title={product.title}
@@ -45,6 +46,7 @@ const ProductList = () => {
                 image={
                     [product.images[0]]
                 }
+                brand={product.brand}
                 isFavourite={product.isFavourite}
             />
           )
