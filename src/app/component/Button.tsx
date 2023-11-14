@@ -1,11 +1,12 @@
 "use client";
 
 interface ButtonProps {
-  variant: "primary" | "secondary" | "tertiary";
-  size: "small" | "medium" | "large";
+  variant?: "primary" | "secondary" | "tertiary";
+  size?: "small" | "medium" | "large";
   onClick: () => void;
   disabled?: boolean;
   icon?: React.ReactNode;
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ const Button = ({
   onClick,
   disabled,
   icon,
+  className,
   children,
 }: ButtonProps) => {
   const variantClasses = {
@@ -31,12 +33,13 @@ const Button = ({
 
   return (
     <button 
-        className={`
-            ${variantClasses[variant]} 
-            ${sizeClasses[size]} 
-            ${disabled ? "opacity-50 cursor-not-allowed" : ""}
-            flex items-center justify-center rounded-md space-x-2
-        `}
+      className={`
+        ${variant && variantClasses[variant]} 
+        ${size && sizeClasses[size]} 
+        ${disabled ? "opacity-50 cursor-not-allowed" : ""}
+        flex items-center justify-center rounded-md space-x-2
+        ${className}
+      `}
         onClick={onClick}
         disabled={disabled}
     >
